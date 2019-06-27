@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<title>チーム分け</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script type="text/javascript" src="group.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron mt-3">
+			<h1>チーム分け</h1>
+		</div>
+
+		<div>
+			<h2>使い方</h2>
+			<ul>
+				<li>チームリーダーを設定したい場合はリーダーを1人1行で記入します。</li>
+				<ul>
+					<li>リーダーの名前に続けて「リーダー:3」のように ":数字" を付けるとそのチームの人数を設定できます。</li>
+				</ul>
+				<li>メンバーを1人1行で記入します。</li>
+				<li>リーダーを設定している場合はリーダーの数に合わせてチーム分けします。設定していない場合はグループ数を設定します。</li>
+				<li>ボタンを押すとチーム分けを実行します。</li>
+			</ul>
+
+			<h2>入力</h2>
+			<div>
+				<table class="table table-bordered">
+					<thead class="thead-dark">
+						<tr>
+							<th>リーダー</th>
+							<th>メンバー</th>
+							<th>グループ数</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<textarea id="leaders" class="form-control" rows="10"></textarea>
+							</td>
+							<td>
+								<textarea id="members" class="form-control" rows="10"></textarea>
+							</td>
+							<td>
+								<select id="team_count" class="form-control">
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<input id="make_group" type="button" value="分け分け" class="btn btn-lg btn-primary" />
+			</div>
+
+			<div style="margin-top: 30px">
+				<h2>結果</h2>
+				<table class="table table-bordered table-striped">
+					<tbody id="groups">
+						<tr>
+							<td>hugahuga</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
